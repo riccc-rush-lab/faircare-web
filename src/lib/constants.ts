@@ -5,10 +5,10 @@ export const SITE = {
   description:
     "From model predictions to governance-ready reports in minutes. Detect, quantify, and present demographic disparities in clinical ML models to the committees that make deployment decisions.",
   github: "https://github.com/riccc-rush-lab/faircareai",
-  pypi: "https://pypi.org/project/faircareai/",
+  pypi: "https://pypi.org/project/faircare/",
   license: "Apache-2.0",
   python: "3.10+",
-  installCmd: "pip install faircareai",
+  installCmd: "pip install faircare",
 } as const;
 
 export const NAV_LINKS = [

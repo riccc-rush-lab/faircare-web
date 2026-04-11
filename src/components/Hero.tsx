@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#quickstart"
-              className="gradient-border inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-primary)] text-white font-medium text-sm hover:brightness-110 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-success)] text-white font-medium text-sm hover:brightness-110 transition-all shadow-sm"
             >
               Get Started <ArrowRight size={16} />
             </a>

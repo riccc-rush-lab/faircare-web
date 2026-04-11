@@ -1,6 +1,6 @@
 export const SITE = {
   name: "FairCareAI",
-  version: "0.2.1",
+  version: "0.2.2",
   tagline: "Fairness auditing for healthcare AI",
   description:
     "From model predictions to governance-ready reports in minutes. Detect, quantify, and present demographic disparities in clinical ML models to the committees that make deployment decisions.",

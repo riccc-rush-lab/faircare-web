@@ -1,4 +1,4 @@
-import { FUNDING } from "@/lib/constants";
+import { FUNDING, LAB } from "@/lib/constants";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Funding() {
@@ -53,6 +53,22 @@ export default function Funding() {
               {/* Disclaimer */}
               <p className="mt-4 text-xs text-[var(--color-text-muted)]/70 text-center italic">
                 {FUNDING.disclaimer}
+              </p>
+            </div>
+
+            {/* Lab attribution */}
+            <div className="mt-6 text-center">
+              <p className="text-xs text-[var(--color-text-muted)]">
+                Developed and maintained by{" "}
+                <a
+                  href={LAB.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[var(--color-primary)] hover:underline"
+                >
+                  {LAB.name}
+                </a>
+                {" "}·{" "}{LAB.lead}
               </p>
             </div>
           </div>

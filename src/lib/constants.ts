@@ -1,9 +1,9 @@
 export const SITE = {
   name: "FairCareAI",
   version: "0.2.3",
-  tagline: "Fairness auditing for healthcare AI",
+  tagline: "Python library for clinical AI fairness auditing",
   description:
-    "Detect and quantify demographic disparities in clinical ML models — and generate governance-ready reports the committees that approve deployments can actually act on.",
+    "An open-source Python library purpose-built for clinical AI fairness. Detect demographic disparities across race, sex, insurance, and language in healthcare ML models — then generate governance-ready reports for ethics committees, IRBs, and C-suite review.",
   github: "https://github.com/riccc-rush-lab/faircareai",
   pypi: "https://pypi.org/project/faircare/",
   license: "Apache-2.0",

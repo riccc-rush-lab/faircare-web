@@ -18,16 +18,22 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://faircare.space"),
   title: "FairCareAI — Clinical AI Fairness & Bias Detection | Python Library",
   description:
-    "Open-source Python library for healthcare AI fairness auditing. Detect demographic bias in clinical ML models across race, sex, and insurance — with governance-ready reports, AUROC subgroup analysis, calibration, and HIPAA-friendly local processing.",
+    "Open-source Python library for healthcare AI fairness auditing — like Fairlearn and AIF360 but purpose-built for clinical ML. Detect demographic bias across race, sex, and insurance. AUROC subgroup analysis, calibration, DCA, governance-ready PDF/PPTX reports, HIPAA-friendly.",
   keywords: [
     "healthcare AI fairness",
     "clinical ML bias detection",
     "python fairness library",
     "fairlearn healthcare",
     "fairlearn clinical",
+    "fairlearn alternative",
     "aif360 alternative",
+    "aif360 healthcare",
+    "aequitas python",
     "machine learning fairness python",
     "demographic bias detection",
+    "demographic parity python",
+    "equalized odds python",
+    "disparate impact healthcare",
     "responsible AI healthcare",
     "clinical prediction model audit",
     "health equity AI",
@@ -40,6 +46,8 @@ export const metadata: Metadata = {
     "clinical AI bias",
     "fairness metrics healthcare",
     "open source fairness audit",
+    "bias audit toolkit",
+    "ai fairness toolkit python",
   ],
   icons: {
     icon: "/favicon.svg",
@@ -60,6 +68,45 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "FairCareAI",
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Python 3.10+",
+  programmingLanguage: "Python",
+  description:
+    "Open-source Python library for healthcare AI fairness auditing. Detect demographic disparities in clinical ML models across race, sex, insurance, and language — with AUROC, calibration, DCA, subgroup equity metrics (demographic parity, equalized odds, predictive parity), and governance-ready HTML/PDF/PPTX reports.",
+  url: "https://faircare.space",
+  downloadUrl: "https://pypi.org/project/faircare/",
+  softwareVersion: "0.2.3",
+  license: "https://www.apache.org/licenses/LICENSE-2.0",
+  codeRepository: "https://github.com/riccc-rush-lab/faircareai",
+  keywords:
+    "healthcare AI fairness, clinical ML, bias detection, python fairness library, fairlearn, aif360, demographic parity, equalized odds, AUROC subgroup analysis, health equity, clinical prediction model, HIPAA",
+  isAccessibleForFree: true,
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  author: {
+    "@type": "Organization",
+    name: "Rush University / University of Chicago",
+    url: "https://www.rushu.rush.edu",
+  },
+  funder: {
+    "@type": "Organization",
+    name: "NIH / NCATS",
+    url: "https://ncats.nih.gov",
+    identifier: "UL1TR002389",
+  },
+  sameAs: [
+    "https://github.com/riccc-rush-lab/faircareai",
+    "https://pypi.org/project/faircare/",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,6 +118,10 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

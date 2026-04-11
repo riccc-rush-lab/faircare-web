@@ -18,10 +18,10 @@ export default function Audiences() {
             Who It&apos;s For
           </p>
           <h2 className="mt-3 text-2xl md:text-3xl font-bold text-center text-[var(--color-text)]">
-            Built for healthcare teams
+            Built for healthcare AI teams
           </h2>
           <p className="mt-3 text-center text-[var(--color-text-muted)] max-w-md mx-auto">
-            From model development through governance sign-off.
+            From clinical model development through governance sign-off.
           </p>
         </ScrollReveal>
 

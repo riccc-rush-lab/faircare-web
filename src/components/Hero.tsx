@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-primary)]/20 bg-white/60 backdrop-blur-sm mb-6">
             <span className="w-2 h-2 rounded-full bg-[var(--color-success)] animate-pulse" />
             <span className="text-xs font-medium text-[var(--color-text-muted)]">
-              Open source &middot; v{SITE.version}
+              Python library &middot; Open source &middot; v{SITE.version}
             </span>
           </div>
 

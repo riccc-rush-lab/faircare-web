@@ -14,7 +14,7 @@ export default function Frameworks() {
       <div className="mx-auto max-w-6xl px-6">
         <ScrollReveal>
           <p className="text-center text-sm font-medium text-[var(--color-text-muted)] mb-6">
-            Aligned with established governance frameworks
+            Aligned with clinical AI governance &amp; reporting frameworks
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {frameworks.map((fw) => (

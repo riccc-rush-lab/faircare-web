@@ -54,7 +54,7 @@ export default function Features() {
             Capabilities
           </p>
           <h2 className="mt-3 text-2xl md:text-3xl font-bold text-center text-[var(--color-text)]">
-            Fairness auditing from metrics
+            Clinical AI fairness metrics
             <br className="hidden sm:block" />{" "}
             through governance sign-off
           </h2>

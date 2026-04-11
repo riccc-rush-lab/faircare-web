@@ -18,7 +18,7 @@ export const NAV_LINKS = [
   { label: "Who It's For", href: "#audiences", external: false },
   {
     label: "Docs",
-    href: "https://github.com/riccc-rush-lab/faircareai/tree/main/docs",
+    href: "https://github.com/riccc-rush-lab/faircareai/blob/main/docs/USAGE.md",
     external: true,
   },
 ] as const;

@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import QuickStart from "@/components/QuickStart";
+import Gallery from "@/components/Gallery";
 import Audiences from "@/components/Audiences";
 import Frameworks from "@/components/Frameworks";
 import Funding from "@/components/Funding";
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Features />
       <QuickStart />
+      <Gallery />
       <Audiences />
       <Frameworks />
       <Funding />

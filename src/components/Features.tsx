@@ -60,35 +60,34 @@ export default function Features() {
           </h2>
         </ScrollReveal>
 
-        <ScrollReveal stagger className="mt-14">
-          <div className="grid gap-4 sm:grid-cols-3">
-            {FEATURES.map((feature, i) => (
+        {/* stagger wrapper IS the grid — direct children are cards, so CSS delays apply */}
+        <ScrollReveal stagger className="mt-14 grid gap-4 sm:grid-cols-3">
+          {FEATURES.map((feature, i) => (
+            <div
+              key={feature.title}
+              className={`fade-up card-hover p-6 rounded-2xl bg-white border border-[var(--color-border)] relative overflow-hidden group ${spans[i] ?? ""}`}
+            >
+              {/* Accent top bar */}
               <div
-                key={feature.title}
-                className={`card-hover p-6 rounded-2xl bg-white border border-[var(--color-border)] relative overflow-hidden group ${spans[i] ?? ""}`}
+                className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                style={{ background: accents[i].color }}
+              />
+
+              <div
+                className="inline-flex items-center justify-center w-11 h-11 rounded-xl"
+                style={{ background: accents[i].bg, color: accents[i].color }}
               >
-                {/* Accent top bar */}
-                <div
-                  className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ background: accents[i].color }}
-                />
-
-                <div
-                  className="inline-flex items-center justify-center w-11 h-11 rounded-xl"
-                  style={{ background: accents[i].bg, color: accents[i].color }}
-                >
-                  {iconMap[feature.icon]}
-                </div>
-
-                <h3 className="mt-4 font-semibold text-[var(--color-text)]">
-                  {feature.title}
-                </h3>
-                <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">
-                  {feature.description}
-                </p>
+                {iconMap[feature.icon]}
               </div>
-            ))}
-          </div>
+
+              <h3 className="mt-4 font-semibold text-[var(--color-text)]">
+                {feature.title}
+              </h3>
+              <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </ScrollReveal>
       </div>
     </section>

@@ -25,44 +25,48 @@ export default function Audiences() {
           </p>
         </ScrollReveal>
 
-        <ScrollReveal stagger className="mt-14">
-          {/* 3+2 layout: 3 cards top row, 2 centered bottom row using 6-col base */}
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-6">
-            {AUDIENCES.map((audience, i) => (
+        {/*
+          stagger wrapper IS the grid — cards are direct children so CSS delays apply.
+          6-col base: first 3 cards each span 2, last 2 cards centered via col-start.
+        */}
+        <ScrollReveal
+          stagger
+          className="mt-14 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-6"
+        >
+          {AUDIENCES.map((audience, i) => (
+            <div
+              key={audience.title}
+              className={`fade-up card-hover relative p-6 rounded-2xl bg-white border border-[var(--color-border)] overflow-hidden ${
+                i < 3 ? "lg:col-span-2" : ""
+              } ${i === 3 ? "lg:col-span-2 lg:col-start-2" : ""} ${
+                i === 4 ? "lg:col-span-2 lg:col-start-4" : ""
+              }`}
+            >
+              {/* Colored left accent bar */}
               <div
-                key={audience.title}
-                className={`card-hover relative p-6 rounded-2xl bg-white border border-[var(--color-border)] overflow-hidden ${
-                  i < 3 ? "lg:col-span-2" : ""
-                } ${i === 3 ? "lg:col-span-2 lg:col-start-2" : ""} ${
-                  i === 4 ? "lg:col-span-2 lg:col-start-4" : ""
-                }`}
+                className="absolute top-4 bottom-4 left-0 w-1 rounded-r-full"
+                style={{ background: accents[i] }}
+              />
+
+              {/* Number badge */}
+              <span
+                className="inline-flex items-center justify-center w-8 h-8 rounded-lg text-xs font-bold mb-3"
+                style={{
+                  background: accents[i],
+                  color: "white",
+                }}
               >
-                {/* Colored left accent bar */}
-                <div
-                  className="absolute top-4 bottom-4 left-0 w-1 rounded-r-full"
-                  style={{ background: accents[i] }}
-                />
+                {String(i + 1).padStart(2, "0")}
+              </span>
 
-                {/* Number badge */}
-                <span
-                  className="inline-flex items-center justify-center w-8 h-8 rounded-lg text-xs font-bold mb-3"
-                  style={{
-                    background: accents[i],
-                    color: "white",
-                  }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-
-                <h3 className="font-semibold text-[var(--color-text)]">
-                  {audience.title}
-                </h3>
-                <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">
-                  {audience.description}
-                </p>
-              </div>
-            ))}
-          </div>
+              <h3 className="font-semibold text-[var(--color-text)]">
+                {audience.title}
+              </h3>
+              <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                {audience.description}
+              </p>
+            </div>
+          ))}
         </ScrollReveal>
       </div>
     </section>

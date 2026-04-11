@@ -15,36 +15,48 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://faircareai.com"),
-  title: "FairCareAI — Fairness Auditing for Healthcare AI",
+  metadataBase: new URL("https://faircare.space"),
+  title: "FairCareAI — Clinical AI Fairness & Bias Detection | Python Library",
   description:
-    "Detect demographic disparities in clinical ML models. From predictions to governance-ready reports in minutes. Open-source, HIPAA-friendly, WCAG 2.1 AA compliant.",
+    "Open-source Python library for healthcare AI fairness auditing. Detect demographic bias in clinical ML models across race, sex, and insurance — with governance-ready reports, AUROC subgroup analysis, calibration, and HIPAA-friendly local processing.",
   keywords: [
-    "healthcare",
-    "fairness",
-    "machine learning",
-    "clinical AI",
-    "bias detection",
-    "responsible AI",
-    "equity",
-    "audit",
+    "healthcare AI fairness",
+    "clinical ML bias detection",
+    "python fairness library",
+    "fairlearn healthcare",
+    "fairlearn clinical",
+    "aif360 alternative",
+    "machine learning fairness python",
+    "demographic bias detection",
+    "responsible AI healthcare",
+    "clinical prediction model audit",
+    "health equity AI",
+    "subgroup analysis python",
+    "AUROC subgroup",
+    "algorithmic fairness clinical",
+    "healthcare ML governance",
+    "sklearn fairness",
+    "health disparity machine learning",
+    "clinical AI bias",
+    "fairness metrics healthcare",
+    "open source fairness audit",
   ],
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "FairCareAI — Fairness Auditing for Healthcare AI",
+    title: "FairCareAI — Clinical AI Fairness & Bias Detection",
     description:
-      "Detect demographic disparities in clinical ML models. Governance-ready reports in minutes.",
+      "Open-source Python library for healthcare AI fairness auditing. Detect demographic disparities. Governance-ready reports in minutes.",
     type: "website",
-    url: "https://faircareai.com",
+    url: "https://faircare.space",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FairCareAI — Fairness Auditing for Healthcare AI",
+    title: "FairCareAI — Clinical AI Fairness & Bias Detection",
     description:
-      "Detect demographic disparities in clinical ML models. Governance-ready reports in minutes.",
+      "Open-source Python library for healthcare AI fairness auditing. Detect demographic disparities. Governance-ready reports in minutes.",
   },
 };
 

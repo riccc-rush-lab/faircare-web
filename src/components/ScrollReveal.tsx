@@ -20,16 +20,18 @@ export default function ScrollReveal({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add("visible");
           if (stagger) {
+            // Animate direct children individually with CSS stagger delays
             Array.from(el.children).forEach((child) =>
               child.classList.add("visible")
             );
+          } else {
+            el.classList.add("visible");
           }
           observer.unobserve(el);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
     observer.observe(el);
@@ -39,7 +41,9 @@ export default function ScrollReveal({
   return (
     <div
       ref={ref}
-      className={`fade-up ${stagger ? "stagger" : ""} ${className}`}
+      // When stagger: wrapper is the layout container, children carry fade-up
+      // When not stagger: wrapper itself carries fade-up
+      className={`${stagger ? "stagger" : "fade-up"} ${className}`}
     >
       {children}
     </div>

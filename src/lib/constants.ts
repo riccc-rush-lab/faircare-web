@@ -1,9 +1,9 @@
 export const SITE = {
   name: "FairCareAI",
-  version: "0.2.3",
+  version: "0.2.4",
   tagline: "Python fairness auditing for clinical AI — two audiences, one run",
   description:
-    "Healthcare AI can silently harm patients when it performs differently across race, sex, and insurance — and most hospitals have no standardized way to detect it. FairCareAI closes that gap: one audit run produces a 15–20 page technical report for your data scientists and a 3–5 page governance summary for your committee.",
+    "Point it at your model's predictions and get two tailored outputs: a full 15–20 page technical report for your data scientists, and a streamlined 3–5 page governance summary for your committee. One run, two audiences, everything needed for deployment approval.",
   github: "https://github.com/riccc-rush-lab/faircareai",
   pypi: "https://pypi.org/project/faircare/",
   license: "Apache-2.0",
@@ -145,8 +145,8 @@ results = audit.run()
 
 # Data scientist persona — full technical report (15–20 pages)
 results.to_html("technical_report.html")
-results.to_pdf("technical_report.pdf")    # requires faircare[export]
+results.to_pdf("technical_report.pdf")    # pip install "faircare[export]"
 
 # Governance persona — streamlined summary (3–5 pages)
 results.to_governance_pdf("governance.pdf")
-results.to_pptx("committee_deck.pptx")   # requires faircare[export]`;
+results.to_pptx("committee_deck.pptx")   # pip install "faircare[export]"`;

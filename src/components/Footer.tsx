@@ -52,10 +52,12 @@ export default function Footer() {
             </summary>
             <pre className="mt-3 p-4 bg-[var(--color-bg-subtle)] rounded-xl overflow-x-auto font-mono text-xs leading-relaxed border border-[var(--color-border)]">
 {`@software{faircareai,
-  title = {FairCareAI: Healthcare AI Fairness Auditing},
+  title   = {FairCareAI: Healthcare AI Fairness Auditing},
+  author  = {FairCareAI Contributors},
+  year    = {2025},
   version = {${SITE.version}},
   license = {${SITE.license}},
-  url = {${SITE.github}}
+  url     = {${SITE.github}}
 }`}
             </pre>
           </details>

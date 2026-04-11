@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { SITE } from "@/lib/constants";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://faircare.space"),
   title: "FairCareAI — Clinical AI Fairness & Bias Detection | Python Library",
   description:
-    "Open-source Python library for healthcare AI fairness auditing — like Fairlearn and AIF360 but purpose-built for clinical ML. Detect demographic bias across race, sex, and insurance. AUROC subgroup analysis, calibration, DCA, governance-ready PDF/PPTX reports, HIPAA-friendly.",
+    "Open-source Python library for clinical AI fairness auditing. Detect demographic bias in healthcare ML models — AUROC subgroup analysis, calibration, DCA, equalized odds — and export governance-ready PDF/PPTX reports. HIPAA-friendly, all local, no data leaves your machine.",
   keywords: [
     "healthcare AI fairness",
     "clinical ML bias detection",
@@ -53,18 +54,22 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
+  alternates: {
+    canonical: "https://faircare.space/",
+  },
   openGraph: {
     title: "FairCareAI — Clinical AI Fairness & Bias Detection",
     description:
-      "Open-source Python library for healthcare AI fairness auditing. Detect demographic disparities. Governance-ready reports in minutes.",
+      "Open-source Python library for clinical AI fairness auditing. Detect demographic disparities in healthcare ML models. Governance-ready reports in minutes.",
     type: "website",
     url: "https://faircare.space",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "FairCareAI — Clinical AI Fairness & Bias Detection",
     description:
-      "Open-source Python library for healthcare AI fairness auditing. Detect demographic disparities. Governance-ready reports in minutes.",
+      "Open-source Python library for clinical AI fairness auditing. Detect demographic disparities in healthcare ML models. Governance-ready reports in minutes.",
   },
 };
 
@@ -79,7 +84,7 @@ const jsonLd = {
     "Open-source Python library for healthcare AI fairness auditing. Detect demographic disparities in clinical ML models across race, sex, insurance, and language — with AUROC, calibration, DCA, subgroup equity metrics (demographic parity, equalized odds, predictive parity), and governance-ready HTML/PDF/PPTX reports.",
   url: "https://faircare.space",
   downloadUrl: "https://pypi.org/project/faircare/",
-  softwareVersion: "0.2.3",
+  softwareVersion: SITE.version,
   license: "https://www.apache.org/licenses/LICENSE-2.0",
   codeRepository: "https://github.com/riccc-rush-lab/faircareai",
   keywords:

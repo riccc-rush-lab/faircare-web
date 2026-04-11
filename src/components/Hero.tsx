@@ -56,7 +56,7 @@ export default function Hero() {
           </h1>
 
           {/* Problem statement callout */}
-          <div className="mt-6 pl-4 border-l-2 border-[var(--color-error)]/40">
+          <div className="mt-6 pl-4 border-l-2 border-[var(--color-error)]">
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed italic">
               A readmission model with 85% overall accuracy may catch only 60%
               of cases for Black patients. These disparities are invisible

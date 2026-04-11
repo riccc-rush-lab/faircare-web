@@ -1,7 +1,7 @@
 export const SITE = {
   name: "FairCareAI",
   version: "0.2.7",
-  tagline: "Python fairness auditing for clinical AI — two audiences, one run",
+  tagline: "Fairness auditing for clinical AI — two audiences, one run",
   description:
     "Point it at your model's predictions and get two tailored outputs: a full 15–20 page technical report for your data scientists, and a streamlined 3–5 page governance summary for your committee. One run, two audiences, everything needed for deployment approval.",
   github: "https://github.com/riccc-rush-lab/faircareai",
@@ -100,14 +100,6 @@ export const AUDIENCES = [
     description:
       "Structured model cards, responsible AI checklists, XML compliance validation, and reproducibility bundles. Everything needed for regulatory submission or internal audit trails.",
   },
-] as const;
-
-export const FRAMEWORKS = [
-  "CHAI RAIC",
-  "TRIPOD+AI",
-  "Van Calster et al. 2025",
-  "WCAG 2.1 AA",
-  "HIPAA-friendly",
 ] as const;
 
 export const LAB = {

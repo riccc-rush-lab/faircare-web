@@ -20,9 +20,9 @@ export default function QuickStart() {
 
         <ScrollReveal className="mt-10 max-w-3xl mx-auto">
           <div className="space-y-5">
-            {/* Step labels */}
+            {/* Step 1 */}
             <div className="flex items-center gap-3 ml-1">
-              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold">
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold shrink-0">
                 1
               </span>
               <span className="text-sm font-medium text-[var(--color-text)]">
@@ -31,12 +31,27 @@ export default function QuickStart() {
             </div>
             <CodeBlock code={SITE.installCmd} lang="bash" title="terminal" />
 
+            {/* Export extras note */}
+            <div className="flex items-start gap-3 ml-1 px-4 py-3 rounded-xl bg-[var(--color-bg-subtle)] border border-[var(--color-border)]">
+              <span className="mt-0.5 text-[var(--color-secondary)] text-sm font-bold shrink-0">→</span>
+              <div>
+                <p className="text-xs text-[var(--color-text-muted)]">
+                  <span className="font-semibold text-[var(--color-text)]">For PDF &amp; PowerPoint exports</span>
+                  {" "}(governance reports, committee decks):
+                </p>
+                <code className="text-xs font-mono text-[var(--color-primary)] mt-1 block">
+                  {SITE.installExportCmd}
+                </code>
+              </div>
+            </div>
+
+            {/* Step 2 */}
             <div className="flex items-center gap-3 ml-1 pt-2">
-              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold">
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold shrink-0">
                 2
               </span>
               <span className="text-sm font-medium text-[var(--color-text)]">
-                Run your first audit
+                Run your audit — one call, two output personas
               </span>
             </div>
             <CodeBlock

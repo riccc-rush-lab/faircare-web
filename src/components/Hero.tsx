@@ -55,7 +55,16 @@ export default function Hero() {
             <span className="gradient-text">healthcare AI</span>
           </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed max-w-lg">
+          {/* Problem statement callout */}
+          <div className="mt-6 pl-4 border-l-2 border-[var(--color-error)]/40">
+            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed italic">
+              A readmission model with 85% overall accuracy may catch only 60%
+              of cases for Black patients. These disparities are invisible
+              without deliberate measurement.
+            </p>
+          </div>
+
+          <p className="mt-5 text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed max-w-lg">
             {SITE.description}
           </p>
 

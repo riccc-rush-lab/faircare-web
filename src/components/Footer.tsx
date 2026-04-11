@@ -1,4 +1,4 @@
-import { SITE } from "@/lib/constants";
+import { SITE, LAB } from "@/lib/constants";
 
 const links = [
   { label: "GitHub", href: SITE.github },
@@ -28,6 +28,26 @@ export default function Footer() {
             <p className="text-xs text-[var(--color-text-muted)]">
               {SITE.license} &middot; v{SITE.version}
             </p>
+
+            {/* Lab attribution */}
+            <div className="pt-1 border-t border-[var(--color-border)] mt-4">
+              <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
+                Supported &amp; developed by{" "}
+                <a
+                  href={LAB.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors"
+                >
+                  {LAB.name}
+                </a>
+                {" "}—{" "}{LAB.lead},{" "}
+                <span className="text-[var(--color-text-muted)]/80">{LAB.leadTitle}</span>
+              </p>
+              <p className="mt-1 text-xs text-[var(--color-text-muted)]/70 italic max-w-xs">
+                {LAB.blurb}
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap gap-x-8 gap-y-3">

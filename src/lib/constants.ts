@@ -1,6 +1,6 @@
 export const SITE = {
   name: "FairCareAI",
-  version: "0.2.4",
+  version: "0.2.5",
   tagline: "Python fairness auditing for clinical AI — two audiences, one run",
   description:
     "Point it at your model's predictions and get two tailored outputs: a full 15–20 page technical report for your data scientists, and a streamlined 3–5 page governance summary for your committee. One run, two audiences, everything needed for deployment approval.",
@@ -109,6 +109,15 @@ export const FRAMEWORKS = [
   "WCAG 2.1 AA",
   "HIPAA-friendly",
 ] as const;
+
+export const LAB = {
+  name: "RICCC Lab",
+  url: "https://www.riccc-lab.com/",
+  lead: "J.C. Rojas, MD, MS",
+  leadTitle: "Assistant Professor · Associate Chief Medical Information Officer",
+  blurb:
+    "Developed by practitioners who deploy clinical AI at health-system scale — and who needed this tool to exist.",
+} as const;
 
 export const FUNDING = {
   statement:

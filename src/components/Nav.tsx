@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { SITE, NAV_LINKS } from "@/lib/constants";
 
 function GitHubIcon({ size = 20 }: { size?: number }) {
@@ -18,12 +19,12 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[var(--color-border)]/50">
       <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 h-16">
-        <a
+        <Link
           href="/"
           className="text-lg font-bold tracking-tight text-[var(--color-primary)] hover:opacity-80 transition-opacity"
         >
           Fair<span className="text-[var(--color-text)]">Care</span>AI
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">

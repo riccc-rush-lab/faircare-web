@@ -1,4 +1,5 @@
 import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -11,12 +12,12 @@ export default function NotFound() {
         <p className="mt-2 text-[var(--color-text-muted)]">
           The page you&apos;re looking for doesn&apos;t exist.
         </p>
-        <a
+        <Link
           href="/"
           className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-lg bg-[var(--color-primary)] text-white text-sm font-medium hover:opacity-90 transition-opacity"
         >
           <ArrowLeft size={16} /> Back to home
-        </a>
+        </Link>
       </div>
     </div>
   );

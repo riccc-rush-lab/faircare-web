@@ -26,13 +26,15 @@ export default function Audiences() {
         </ScrollReveal>
 
         <ScrollReveal stagger className="mt-14">
-          {/* 3+2 layout: 3 cards top row, 2 centered bottom row */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {/* 3+2 layout: 3 cards top row, 2 centered bottom row using 6-col base */}
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-6">
             {AUDIENCES.map((audience, i) => (
               <div
                 key={audience.title}
                 className={`card-hover relative p-6 rounded-2xl bg-white border border-[var(--color-border)] overflow-hidden ${
-                  i >= 3 ? "lg:col-start-auto" : ""
+                  i < 3 ? "lg:col-span-2" : ""
+                } ${i === 3 ? "lg:col-span-2 lg:col-start-2" : ""} ${
+                  i === 4 ? "lg:col-span-2 lg:col-start-4" : ""
                 }`}
               >
                 {/* Colored left accent bar */}

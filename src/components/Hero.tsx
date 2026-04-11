@@ -97,13 +97,31 @@ export default function Hero() {
 
           {/* Meta badges */}
           <div className="mt-5 flex flex-wrap items-center gap-2">
-            {[SITE.license, `Python ${SITE.python}`, "HIPAA-friendly"].map(
-              (badge) => (
+            {[
+              {
+                label: SITE.license,
+                href: "https://www.apache.org/licenses/LICENSE-2.0",
+              },
+              { label: `Python ${SITE.python}`, href: "https://pypi.org/project/faircare/" },
+              { label: "HIPAA-friendly", href: undefined },
+              { label: `v${SITE.version} on PyPI`, href: SITE.pypi },
+            ].map(({ label, href }) =>
+              href ? (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-1 rounded-md text-xs font-medium text-[var(--color-text-muted)] bg-white/70 border border-[var(--color-border)] backdrop-blur-sm hover:border-[var(--color-primary)]/40 hover:text-[var(--color-primary)] transition-colors"
+                >
+                  {label}
+                </a>
+              ) : (
                 <span
-                  key={badge}
+                  key={label}
                   className="px-2.5 py-1 rounded-md text-xs font-medium text-[var(--color-text-muted)] bg-white/70 border border-[var(--color-border)] backdrop-blur-sm"
                 >
-                  {badge}
+                  {label}
                 </span>
               )
             )}

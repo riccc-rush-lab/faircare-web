@@ -13,9 +13,14 @@ export const SITE = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Features", href: "#features" },
-  { label: "Quick Start", href: "#quickstart" },
-  { label: "Who It's For", href: "#audiences" },
+  { label: "Features", href: "#features", external: false },
+  { label: "Quick Start", href: "#quickstart", external: false },
+  { label: "Who It's For", href: "#audiences", external: false },
+  {
+    label: "Docs",
+    href: "https://github.com/riccc-rush-lab/faircareai/tree/main/docs",
+    external: true,
+  },
 ] as const;
 
 export const FEATURES = [

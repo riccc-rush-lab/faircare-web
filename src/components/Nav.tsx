@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { SITE, NAV_LINKS } from "@/lib/constants";
 
@@ -28,15 +28,28 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="relative text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-[var(--color-primary)] after:transition-all hover:after:w-full"
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-0.5 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              >
+                {link.label}
+                <ArrowUpRight size={13} className="opacity-50" />
+              </a>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="relative text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-[var(--color-primary)] after:transition-all hover:after:w-full"
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <a
             href={SITE.github}
             target="_blank"
@@ -66,10 +79,13 @@ export default function Nav() {
               <a
                 key={link.href}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 onClick={() => setOpen(false)}
-                className="py-2.5 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors"
+                className="flex items-center gap-1 py-2.5 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors"
               >
                 {link.label}
+                {link.external && <ArrowUpRight size={13} className="opacity-40" />}
               </a>
             ))}
             <hr className="my-2 border-[var(--color-border)]" />

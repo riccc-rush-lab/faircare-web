@@ -58,8 +58,8 @@ export default function Hero() {
           {/* Problem statement callout */}
           <div className="mt-6 pl-4 border-l-2 border-[var(--color-error)]">
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed italic">
-              A readmission model with 85% overall accuracy may catch only 60%
-              of cases for Black patients. These disparities are invisible
+              A model that looks strong in aggregate may perform substantially
+              worse for certain populations — and those gaps are invisible
               without deliberate measurement.
             </p>
           </div>

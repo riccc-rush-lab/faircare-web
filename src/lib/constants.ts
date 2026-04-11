@@ -1,6 +1,6 @@
 export const SITE = {
   name: "FairCareAI",
-  version: "0.2.5",
+  version: "0.2.7",
   tagline: "Python fairness auditing for clinical AI — two audiences, one run",
   description:
     "Point it at your model's predictions and get two tailored outputs: a full 15–20 page technical report for your data scientists, and a streamlined 3–5 page governance summary for your committee. One run, two audiences, everything needed for deployment approval.",
@@ -34,7 +34,7 @@ export const FEATURES = [
     icon: "BarChart3",
     title: "Discrimination, Calibration & Clinical Utility",
     description:
-      "AUROC, calibration curves, Brier score, DCA, and classification metrics per Van Calster et al. (2025), all with bootstrap confidence intervals. The full clinical validation stack in one call.",
+      "AUROC, calibration curves, Brier score, DCA, and classification metrics, all with bootstrap confidence intervals. The full clinical validation stack in one call.",
   },
   {
     icon: "GitBranch",
@@ -93,7 +93,7 @@ export const AUDIENCES = [
   {
     title: "Health Equity Researchers",
     description:
-      "Publication-ready figures — WCAG 2.1 AA, colorblind-safe Okabe-Ito palette, 14px minimum — with full methodology citations (CHAI RAIC, TRIPOD+AI, Van Calster et al. 2025).",
+      "Publication-ready figures — WCAG 2.1 AA, colorblind-safe Okabe-Ito palette, 14px minimum — with full methodology citations.",
   },
   {
     title: "Regulatory & Compliance Teams",

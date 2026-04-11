@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 const frameworks = [
   { name: "CHAI RAIC", color: "var(--color-primary)" },
   { name: "TRIPOD+AI", color: "var(--color-success)" },
-  { name: "Van Calster et al. 2025", color: "var(--color-secondary)" },
+  { name: "Calibration & DCA", color: "var(--color-secondary)" },
   { name: "WCAG 2.1 AA", color: "var(--color-accent)" },
   { name: "HIPAA-friendly", color: "var(--color-success)" },
 ];
@@ -14,7 +14,7 @@ export default function Frameworks() {
       <div className="mx-auto max-w-6xl px-6">
         <ScrollReveal>
           <p className="text-center text-sm font-medium text-[var(--color-text-muted)] mb-6">
-            Aligned with clinical AI governance &amp; reporting frameworks
+            Built for clinical AI governance &amp; reporting standards
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {frameworks.map((fw) => (
